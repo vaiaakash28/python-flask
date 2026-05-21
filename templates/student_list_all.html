@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student List</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: blue;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Student List</h1>
+
+    <form method="GET" action="/student_search">
+
+        <input type="text" name="keyword" placeholder="Search by ID or Name">
+
+        <button type="submit">Search</button>
+
+    </form>
+
+    <br><br>
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Semester</th>
+            <th>Actions</th>
+
+        </tr>
+
+        {% for s in students %}
+
+        <tr>
+
+            <td>{{ s.id }}</td>
+            <td>{{ s.username }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.branch }}</td>
+            <td>{{ s.semester }}</td>
+            <td>
+                <a href="/edit_student/{{ s.id }}">Edit</a>
+                |
+                <a href="/delete_student/{{ s.id }}" onclick="return confirm('Are you sure?')">
+                    Delete
+                </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

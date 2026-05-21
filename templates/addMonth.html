@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Month</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container{
+            width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkgreen;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add Month Fees</h2>
+
+        <form action="/add_month" method="POST">
+
+            <label>Student ID</label>
+            <input type="number" name="student_id" placeholder="Enter student ID" required>
+
+            <label>Month</label>
+            <input type="text" name="month" placeholder="Enter month" required>
+
+            <label>Fees</label>
+            <input type="text" name="fees" placeholder="Enter fees amount" required>
+
+            <button type="submit">Save Month</button>
+
+        </form>
+
+        <br>
+
+        <a href="/dashboard">← Back to Dashboard</a>
+
+    </div>
+
+</body>
+
+</html>

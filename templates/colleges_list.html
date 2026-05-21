@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College List</title>
+</head>
+<body>
+
+<h1>College List</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>College Name</th>
+    <th>City</th>
+    <th>Course</th>
+</tr>
+
+{% for c in colleges %}
+
+<tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.college_name }}</td>
+    <td>{{ c.city }}</td>
+    <td>{{ c.course }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+
+        .container{
+            width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        input, select{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Add Student</h2>
+
+        <form action="/add_student" method="POST">
+
+            <label>Student Name</label>
+            <input type="text" name="name" placeholder="Enter student name" required>
+
+            <label>Month</label>
+            <input type="text" name="month" placeholder="Enter month" required>
+
+            <label>Status</label>
+
+            <select name="status" required>
+
+                <option value="">Select Status</option>
+                <option value="Pass">Pass</option>
+                <option value="Fail">Fail</option>
+
+            </select>
+
+            <button type="submit">Add Student</button>
+
+        </form>
+
+        <br>
+
+        <a href="/dashboard">← Back to Dashboard</a>
+
+    </div>
+
+</body>
+
+</html>

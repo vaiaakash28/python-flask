@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Student</title>
+</head>
+
+<body>
+
+<h2>Edit Student</h2>
+
+<form action="/update_student/{{ student.id }}" method="POST">
+
+    Name:
+    <input type="text" name="name" value="{{ student.name }}">
+    <br><br>
+
+    Branch:
+    <input type="text" name="branch" value="{{ student.branch }}">
+    <br><br>
+
+    Semester:
+    <input type="text" name="semester" value="{{ student.semester }}">
+    <br><br>
+
+    <button type="submit">Update</button>
+
+</form>
+
+</body>
+
+</html>

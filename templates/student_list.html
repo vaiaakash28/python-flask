@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<h1>{{ title }}</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Month</th>
+    <th>Status</th>
+</tr>
+
+{% for s in students %}
+
+<tr>
+    <td>{{ s.id }}</td>
+    <td>{{ s.name }}</td>
+    <td>{{ s.month }}</td>
+    <td>{{ s.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

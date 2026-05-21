@@ -1,0 +1,10 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+.book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}

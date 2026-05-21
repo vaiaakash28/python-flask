@@ -1,0 +1,53 @@
+<html>
+
+<head>
+   <link rel="stylesheet" href="/static/css/show.css">
+</head>
+
+<body>
+
+<h1>Welcome To Student Management System</h1>
+
+<h2>Search By ID</h2>
+
+<form method="GET" action="/students">
+    <input type="number" name="id" placeholder="Enter ID">
+    <button type="submit">Search</button>
+</form>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Semester</th>
+        <th>Month</th>
+        <th>Fees</th>
+    </tr>
+
+    {% if students %}
+
+        {% for s in students %}
+        <tr>
+            <td>{{ s.id }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.branch }}</td>
+            <td>{{ s.semester }}</td>
+            <td>{{ s.month }}</td>
+            <td>{{ s.fees }}</td>
+        </tr>
+        {% endfor %}
+
+    {% else %}
+
+        <tr>
+            <td colspan="6">No Data Found</td>
+        </tr>
+
+    {% endif %}
+
+</table>
+
+</body>
+</html>

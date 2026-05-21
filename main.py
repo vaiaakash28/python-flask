@@ -7,7 +7,7 @@ def get_db_connection():
     return pymysql.connect(
         host="localhost",
         user="myuser",
-        password="Aakash@5454",
+        password="mypassword",
         database="college_db"
     )
 
